@@ -1,16 +1,19 @@
 function comprar() {
     let tipo = document.getElementById('tipo-ingresso');
     let qtd = parseInt(document.getElementById('qtd').value);
-    
+    // Verificar se a quantidade digitada é válida e superior a zero
+    if (isNaN(qtd) || qtd <= 0) {
+        alert ('Quantidade inválida! Por favor insira uma quantidade correta');
+        return;        
+    }
+
     if (tipo.value == 'pista') {
         comprarPista(qtd);
     } else if(tipo.value == 'superior') {
         comprarSuperior (qtd);
     } else {
         comprarInferior (qtd);
-    }
-
- 
+    } 
 }
 
 function comprarPista(qtd) {
