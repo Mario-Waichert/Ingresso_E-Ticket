@@ -48,3 +48,11 @@ function comprarInferior(qtd) {
         alert ('Compra realizada com sucesso!');
     }
 }
+//Converter String para Inteiro
+function converterInteiro(valorString) {
+    return parseInt(valorString);    
+}
+
+let valorString = '42';
+let valorInteiro = converterInteiro(valorString);
+console.log(valorInteiro);
