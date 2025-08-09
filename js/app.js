@@ -1,8 +1,9 @@
 let usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');
 
    while (usarCalculadora !== 'S' && usarCalculadora !== 'N') {
+         alert('Por favor responde S para sim ou N para não.'); 
          usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');
-         alert('Por favor responde S para sim ou N para não.');       
+              
     }
 if (usarCalculadora == 'S') {
     calculadora ();
@@ -29,8 +30,9 @@ function calculadora() {
    alert (`O Resultado é ${resultado}`);
    usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');
     while (usarCalculadora !== 'S' && usarCalculadora !== 'N') {
+         alert('Por favor responde S para sim ou N para não.');
          usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');
-         alert('Por favor responde S para sim ou N para não.');       
+                
     }
 if (usarCalculadora == 'S') {
     calculadora ();
