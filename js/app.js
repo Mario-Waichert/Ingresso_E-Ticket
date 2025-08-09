@@ -56,8 +56,28 @@ function parOuImpar() {
 
 parOuImpar();
 
+function conversorTemperatura() {
+    let temperatura = parseInt(prompt('Digite uma temperatura'));
+    tipoConversao = prompt ('Escolha 1 - de Celsius para Fahrenheit ou 2 - de Fahrenheit para Celsius');
+    while (tipoConversao != 1 && tipoConversao != 2) {
+        alert('Operação inválida, só é possível escolher 1 ou 2');
+        tipoConversao = prompt ('Escolha 1 - de Celsius para Fahrenheit ou 2 - de Fahrenheit para Celsius');  
+    }
+    if (tipoConversao == 1) {
+      temperaturaConvertida = (temperatura * 1.8) + 32;
+      alert(`A temperatura ${temperatura}ºC corresponde a ${temperaturaConvertida}ºF.`);
+        
+    } else if (tipoConversao == 2) {
+        temperaturaConvertida = (temperatura - 32) / 1.8;
+        alert(`A temperatura ${temperatura}ºF corresponde a ${temperaturaConvertida}ºC.`);
+    } else {
+        alert('Operação inválida, só é possível escolher 1 ou 2');
+    }
+    
+}
 
- 
+conversorTemperatura();
+
 function comprar() {
     let tipo = document.getElementById('tipo-ingresso');
     let qtd = parseInt(document.getElementById('qtd').value);
