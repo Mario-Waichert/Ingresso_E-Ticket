@@ -41,7 +41,23 @@ function calculadora() {
 if (usarCalculadora == 'S') {
     calculadora ();
 } 
-} 
+
+}
+
+function parOuImpar() {
+    let numeroParOuImpar = parseInt(prompt('Digite um número por favor'));
+    
+    if (numeroParOuImpar % 2 == 0 ) {
+        alert ('Este número é par.')
+    } else {
+        alert ('Este número e impar.')
+    }
+}
+
+parOuImpar();
+
+
+ 
 function comprar() {
     let tipo = document.getElementById('tipo-ingresso');
     let qtd = parseInt(document.getElementById('qtd').value);
