@@ -25,6 +25,10 @@ function calculadora() {
     } else if (operacaoMatematica == '*'){
         resultado = numero1 * numero2;
     } else if (operacaoMatematica == '/'){
+        while (numero2 == 0) {
+            alert ('Não é possível dividir por zero!');
+            numero2 = parseInt(prompt ('Digite o segundo número'));    
+        }
         resultado = numero1 / numero2;
       }
    alert (`O Resultado é ${resultado}`);
