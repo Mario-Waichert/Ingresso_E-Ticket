@@ -1,7 +1,8 @@
 let usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');
 
    while (usarCalculadora !== 'S' && usarCalculadora !== 'N') {
-         usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');       
+         usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');
+         alert('Por favor responde S para sim ou N para não.');       
     }
 if (usarCalculadora == 'S') {
     calculadora ();
@@ -25,16 +26,16 @@ function calculadora() {
     } else if (operacaoMatematica == '/'){
         resultado = numero1 / numero2;
       }
-
    alert (`O Resultado é ${resultado}`);
    usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');
-   if (usarCalculadora == 'S') {
+    while (usarCalculadora !== 'S' && usarCalculadora !== 'N') {
+         usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');
+         alert('Por favor responde S para sim ou N para não.');       
+    }
+if (usarCalculadora == 'S') {
     calculadora ();
-}
-
- 
 } 
-
+} 
 function comprar() {
     let tipo = document.getElementById('tipo-ingresso');
     let qtd = parseInt(document.getElementById('qtd').value);
