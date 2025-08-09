@@ -1,3 +1,40 @@
+let usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');
+
+   while (usarCalculadora !== 'S' && usarCalculadora !== 'N') {
+         usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');       
+    }
+if (usarCalculadora == 'S') {
+    calculadora ();
+}
+
+function calculadora() {
+    let numero1 = parseInt(prompt ('Digite o primeiro número'));
+    let operacaoMatematica = prompt ('Digite + para somar , - para subtrair , * para multiplicar ou / para dividir');
+    while (operacaoMatematica !== '+'&& operacaoMatematica !== '-' && operacaoMatematica 
+        !== '*' && operacaoMatematica !== '/') {
+            alert ('Escolha uma operação matemática válida (+,-,*,/)');
+            operacaoMatematica = prompt ('Digite + para somar , - para subtrair , * para multiplicar ou / para dividir');
+    }
+    let numero2 = parseInt(prompt ('Digite o segundo número'));
+    if (operacaoMatematica == '+') {
+        resultado = numero1 + numero2;
+    } else if (operacaoMatematica == '-'){
+        resultado = numero1 - numero2;
+    } else if (operacaoMatematica == '*'){
+        resultado = numero1 * numero2;
+    } else if (operacaoMatematica == '/'){
+        resultado = numero1 / numero2;
+      }
+
+   alert (`O Resultado é ${resultado}`);
+   usarCalculadora = prompt ('Deseja utilzar a calculadora? S/N?');
+   if (usarCalculadora == 'S') {
+    calculadora ();
+}
+
+ 
+} 
+
 function comprar() {
     let tipo = document.getElementById('tipo-ingresso');
     let qtd = parseInt(document.getElementById('qtd').value);
